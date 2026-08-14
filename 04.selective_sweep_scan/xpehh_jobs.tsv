@@ -1,0 +1,5 @@
+comparison	chrom_list	query_hap_pattern	ref_hap_pattern	map_pattern	output_prefix_pattern
+indicine.vs.taurine	1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29	data/xpehh_hap/Chr{chrom}.indicine.hap	data/xpehh_hap/Chr{chrom}.taurine.hap	data/maps/Chr{chrom}.map	results/xpehh_norm/Chr{chrom}.{comparison}
+SAI.vs.taurine	1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29	data/xpehh_hap/Chr{chrom}.SAI.hap	data/xpehh_hap/Chr{chrom}.taurine.hap	data/maps/Chr{chrom}.map	results/xpehh_norm/Chr{chrom}.{comparison}
+EAI.vs.taurine	1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29	data/xpehh_hap/Chr{chrom}.EAI.hap	data/xpehh_hap/Chr{chrom}.taurine.hap	data/maps/Chr{chrom}.map	results/xpehh_norm/Chr{chrom}.{comparison}
+SAI.vs.EAI	1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29	data/xpehh_hap/Chr{chrom}.SAI.hap	data/xpehh_hap/Chr{chrom}.EAI.hap	data/maps/Chr{chrom}.map	results/xpehh_norm/Chr{chrom}.{comparison}

@@ -1,0 +1,13 @@
+group	win	step	Fst	XPEHH	Pi_ratio
+indicine.vs.taurine_20_10	20	10	results/fst/indicine.vs.taurine.Fst.20kb.windowed.weir.fst	results/xpehh_windows/indicine.vs.taurine.20kb.10kb.xpehh.txt	results/pi_ratio/indicine.vs.taurine.win20k_step10k.pi_ratio.txt
+indicine.vs.taurine_50_20	50	20	results/fst/indicine.vs.taurine.Fst.50kb.windowed.weir.fst	results/xpehh_windows/indicine.vs.taurine.50kb.20kb.xpehh.txt	results/pi_ratio/indicine.vs.taurine.win50k_step20k.pi_ratio.txt
+indicine.vs.taurine_100_50	100	50	results/fst/indicine.vs.taurine.Fst.100kb.windowed.weir.fst	results/xpehh_windows/indicine.vs.taurine.100kb.50kb.xpehh.txt	results/pi_ratio/indicine.vs.taurine.win100k_step50k.pi_ratio.txt
+SAI.vs.taurine_20_10	20	10	results/fst/SAI.vs.taurine.Fst.20kb.windowed.weir.fst	results/xpehh_windows/SAI.vs.taurine.20kb.10kb.xpehh.txt	results/pi_ratio/SAI.vs.taurine.win20k_step10k.pi_ratio.txt
+SAI.vs.taurine_50_20	50	20	results/fst/SAI.vs.taurine.Fst.50kb.windowed.weir.fst	results/xpehh_windows/SAI.vs.taurine.50kb.20kb.xpehh.txt	results/pi_ratio/SAI.vs.taurine.win50k_step20k.pi_ratio.txt
+SAI.vs.taurine_100_50	100	50	results/fst/SAI.vs.taurine.Fst.100kb.windowed.weir.fst	results/xpehh_windows/SAI.vs.taurine.100kb.50kb.xpehh.txt	results/pi_ratio/SAI.vs.taurine.win100k_step50k.pi_ratio.txt
+EAI.vs.taurine_20_10	20	10	results/fst/EAI.vs.taurine.Fst.20kb.windowed.weir.fst	results/xpehh_windows/EAI.vs.taurine.20kb.10kb.xpehh.txt	results/pi_ratio/EAI.vs.taurine.win20k_step10k.pi_ratio.txt
+EAI.vs.taurine_50_20	50	20	results/fst/EAI.vs.taurine.Fst.50kb.windowed.weir.fst	results/xpehh_windows/EAI.vs.taurine.50kb.20kb.xpehh.txt	results/pi_ratio/EAI.vs.taurine.win50k_step20k.pi_ratio.txt
+EAI.vs.taurine_100_50	100	50	results/fst/EAI.vs.taurine.Fst.100kb.windowed.weir.fst	results/xpehh_windows/EAI.vs.taurine.100kb.50kb.xpehh.txt	results/pi_ratio/EAI.vs.taurine.win100k_step50k.pi_ratio.txt
+SAI.vs.EAI_20_10	20	10	results/fst/SAI.vs.EAI.Fst.20kb.windowed.weir.fst	results/xpehh_windows/SAI.vs.EAI.20kb.10kb.xpehh.txt	results/pi_ratio/SAI.vs.EAI.win20k_step10k.pi_ratio.txt
+SAI.vs.EAI_50_20	50	20	results/fst/SAI.vs.EAI.Fst.50kb.windowed.weir.fst	results/xpehh_windows/SAI.vs.EAI.50kb.20kb.xpehh.txt	results/pi_ratio/SAI.vs.EAI.win50k_step20k.pi_ratio.txt
+SAI.vs.EAI_100_50	100	50	results/fst/SAI.vs.EAI.Fst.100kb.windowed.weir.fst	results/xpehh_windows/SAI.vs.EAI.100kb.50kb.xpehh.txt	results/pi_ratio/SAI.vs.EAI.win100k_step50k.pi_ratio.txt

@@ -1,0 +1,13 @@
+comparison	pop1_samples	pop2_samples	window_bp	step_bp	input_vcf	output_prefix
+indicine.vs.taurine	data/sample_lists/indicine.txt	data/sample_lists/taurine.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/fst/indicine.vs.taurine.Fst.20kb
+indicine.vs.taurine	data/sample_lists/indicine.txt	data/sample_lists/taurine.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/fst/indicine.vs.taurine.Fst.50kb
+indicine.vs.taurine	data/sample_lists/indicine.txt	data/sample_lists/taurine.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/fst/indicine.vs.taurine.Fst.100kb
+SAI.vs.taurine	data/sample_lists/SAI.txt	data/sample_lists/taurine.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/fst/SAI.vs.taurine.Fst.20kb
+SAI.vs.taurine	data/sample_lists/SAI.txt	data/sample_lists/taurine.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/fst/SAI.vs.taurine.Fst.50kb
+SAI.vs.taurine	data/sample_lists/SAI.txt	data/sample_lists/taurine.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/fst/SAI.vs.taurine.Fst.100kb
+EAI.vs.taurine	data/sample_lists/EAI.txt	data/sample_lists/taurine.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/fst/EAI.vs.taurine.Fst.20kb
+EAI.vs.taurine	data/sample_lists/EAI.txt	data/sample_lists/taurine.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/fst/EAI.vs.taurine.Fst.50kb
+EAI.vs.taurine	data/sample_lists/EAI.txt	data/sample_lists/taurine.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/fst/EAI.vs.taurine.Fst.100kb
+SAI.vs.EAI	data/sample_lists/SAI.txt	data/sample_lists/EAI.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/fst/SAI.vs.EAI.Fst.20kb
+SAI.vs.EAI	data/sample_lists/SAI.txt	data/sample_lists/EAI.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/fst/SAI.vs.EAI.Fst.50kb
+SAI.vs.EAI	data/sample_lists/SAI.txt	data/sample_lists/EAI.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/fst/SAI.vs.EAI.Fst.100kb

@@ -1,0 +1,22 @@
+window: example
+posterior_threshold: 0.80
+minimum_markers: 30
+minimum_total_count: 10
+site_fdr_threshold: 0.05
+donor_ancestries:
+  - Yak
+  - Gayal
+background_ancestries:
+  - SAI
+  - Taurine
+inputs:
+  msp:
+    - data/rfmix/chr1.msp.tsv
+  fb:
+    - data/rfmix/chr1.fb.tsv
+  gtf: data/annotation.gtf
+  phaser_blocks: data/phaser/sample.haplotypic_counts.tsv
+  phased_genotypes: data/phased/sample.vcf.gz
+  site_ase: data/site_ASE/significant.tsv
+outputs:
+  root: results/example

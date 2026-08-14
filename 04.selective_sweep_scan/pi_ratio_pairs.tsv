@@ -1,0 +1,13 @@
+comparison	numerator_pop	denominator_pop	numerator_file	denominator_file	output_file
+indicine.vs.taurine	indicine	taurine	results/pi/indicine.win20k_step10k.windowed.pi	results/pi/taurine.win20k_step10k.windowed.pi	indicine.vs.taurine.win20k_step10k.pi_ratio.txt
+indicine.vs.taurine	indicine	taurine	results/pi/indicine.win50k_step20k.windowed.pi	results/pi/taurine.win50k_step20k.windowed.pi	indicine.vs.taurine.win50k_step20k.pi_ratio.txt
+indicine.vs.taurine	indicine	taurine	results/pi/indicine.win100k_step50k.windowed.pi	results/pi/taurine.win100k_step50k.windowed.pi	indicine.vs.taurine.win100k_step50k.pi_ratio.txt
+SAI.vs.taurine	SAI	taurine	results/pi/SAI.win20k_step10k.windowed.pi	results/pi/taurine.win20k_step10k.windowed.pi	SAI.vs.taurine.win20k_step10k.pi_ratio.txt
+SAI.vs.taurine	SAI	taurine	results/pi/SAI.win50k_step20k.windowed.pi	results/pi/taurine.win50k_step20k.windowed.pi	SAI.vs.taurine.win50k_step20k.pi_ratio.txt
+SAI.vs.taurine	SAI	taurine	results/pi/SAI.win100k_step50k.windowed.pi	results/pi/taurine.win100k_step50k.windowed.pi	SAI.vs.taurine.win100k_step50k.pi_ratio.txt
+EAI.vs.taurine	EAI	taurine	results/pi/EAI.win20k_step10k.windowed.pi	results/pi/taurine.win20k_step10k.windowed.pi	EAI.vs.taurine.win20k_step10k.pi_ratio.txt
+EAI.vs.taurine	EAI	taurine	results/pi/EAI.win50k_step20k.windowed.pi	results/pi/taurine.win50k_step20k.windowed.pi	EAI.vs.taurine.win50k_step20k.pi_ratio.txt
+EAI.vs.taurine	EAI	taurine	results/pi/EAI.win100k_step50k.windowed.pi	results/pi/taurine.win100k_step50k.windowed.pi	EAI.vs.taurine.win100k_step50k.pi_ratio.txt
+SAI.vs.EAI	SAI	EAI	results/pi/SAI.win20k_step10k.windowed.pi	results/pi/EAI.win20k_step10k.windowed.pi	SAI.vs.EAI.win20k_step10k.pi_ratio.txt
+SAI.vs.EAI	SAI	EAI	results/pi/SAI.win50k_step20k.windowed.pi	results/pi/EAI.win50k_step20k.windowed.pi	SAI.vs.EAI.win50k_step20k.pi_ratio.txt
+SAI.vs.EAI	SAI	EAI	results/pi/SAI.win100k_step50k.windowed.pi	results/pi/EAI.win100k_step50k.windowed.pi	SAI.vs.EAI.win100k_step50k.pi_ratio.txt

@@ -1,0 +1,13 @@
+comparison	input_dir	chrom_lengths	window_bp	step_bp	output
+indicine.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	20000	10000	results/xpehh_windows/indicine.vs.taurine.20kb.10kb.xpehh.txt
+indicine.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	50000	20000	results/xpehh_windows/indicine.vs.taurine.50kb.20kb.xpehh.txt
+indicine.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	100000	50000	results/xpehh_windows/indicine.vs.taurine.100kb.50kb.xpehh.txt
+SAI.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	20000	10000	results/xpehh_windows/SAI.vs.taurine.20kb.10kb.xpehh.txt
+SAI.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	50000	20000	results/xpehh_windows/SAI.vs.taurine.50kb.20kb.xpehh.txt
+SAI.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	100000	50000	results/xpehh_windows/SAI.vs.taurine.100kb.50kb.xpehh.txt
+EAI.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	20000	10000	results/xpehh_windows/EAI.vs.taurine.20kb.10kb.xpehh.txt
+EAI.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	50000	20000	results/xpehh_windows/EAI.vs.taurine.50kb.20kb.xpehh.txt
+EAI.vs.taurine	results/xpehh_norm	data/chrom_lengths.tsv	100000	50000	results/xpehh_windows/EAI.vs.taurine.100kb.50kb.xpehh.txt
+SAI.vs.EAI	results/xpehh_norm	data/chrom_lengths.tsv	20000	10000	results/xpehh_windows/SAI.vs.EAI.20kb.10kb.xpehh.txt
+SAI.vs.EAI	results/xpehh_norm	data/chrom_lengths.tsv	50000	20000	results/xpehh_windows/SAI.vs.EAI.50kb.20kb.xpehh.txt
+SAI.vs.EAI	results/xpehh_norm	data/chrom_lengths.tsv	100000	50000	results/xpehh_windows/SAI.vs.EAI.100kb.50kb.xpehh.txt

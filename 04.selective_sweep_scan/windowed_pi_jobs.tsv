@@ -1,0 +1,13 @@
+population	samples	window_bp	step_bp	input_vcf	output_prefix
+indicine	data/sample_lists/indicine.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/pi/indicine.win20k_step10k
+indicine	data/sample_lists/indicine.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/pi/indicine.win50k_step20k
+indicine	data/sample_lists/indicine.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/pi/indicine.win100k_step50k
+taurine	data/sample_lists/taurine.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/pi/taurine.win20k_step10k
+taurine	data/sample_lists/taurine.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/pi/taurine.win50k_step20k
+taurine	data/sample_lists/taurine.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/pi/taurine.win100k_step50k
+SAI	data/sample_lists/SAI.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/pi/SAI.win20k_step10k
+SAI	data/sample_lists/SAI.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/pi/SAI.win50k_step20k
+SAI	data/sample_lists/SAI.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/pi/SAI.win100k_step50k
+EAI	data/sample_lists/EAI.txt	20000	10000	data/genotypes/all_chr.vcf.gz	results/pi/EAI.win20k_step10k
+EAI	data/sample_lists/EAI.txt	50000	20000	data/genotypes/all_chr.vcf.gz	results/pi/EAI.win50k_step20k
+EAI	data/sample_lists/EAI.txt	100000	50000	data/genotypes/all_chr.vcf.gz	results/pi/EAI.win100k_step50k
