@@ -9,11 +9,18 @@ donor_ancestries:
 background_ancestries:
   - SAI
   - Taurine
+rfmix:
+  reference_bcf: data/rfmix_inputs/chr1.reference.clean.bcf
+  query_bcf: data/rfmix_inputs/chr1.query.clean.bcf
+  sample_map: data/rfmix_inputs/reference_sample_map.tsv
+  genetic_map: data/rfmix_inputs/chr1.uniform_fullchr_1Mb_1cM.map.tsv
+  chromosome: 1
+  output_prefix: results/example/rfmix/chr1.rfmix.fullchr
 inputs:
   msp:
-    - data/rfmix/chr1.msp.tsv
+    - results/example/rfmix/chr1.rfmix.fullchr.msp.tsv
   fb:
-    - data/rfmix/chr1.fb.tsv
+    - results/example/rfmix/chr1.rfmix.fullchr.fb.tsv
   gtf: data/annotation.gtf
   phaser_blocks: data/phaser/sample.haplotypic_counts.tsv
   phased_genotypes: data/phased/sample.vcf.gz

@@ -10,8 +10,8 @@
 # replicate_n: number of biological replicates in that group.
 #
 # results/target_sets.tsv and results/g0_features_with_fixed_bins.tsv are produced by script 01.
-# The same G0, fixed 10-bin assignments, samples, expression values and denominator are used for
-# every target threshold.
+# The same G0, fixed 10-bin assignments, samples, expression values and denominator are used when
+# comparing each observed target set with its matched background gene sets.
 
 suppressPackageStartupMessages({
   library(data.table)
@@ -192,8 +192,8 @@ for (configuration_index in seq_len(nrow(configurations))) {
   type_offset <- if (config$target_type == "tissue_specific") 0L else 5000L
 
   for (replicate in seq_len(background_replicates)) {
-    # The seed depends on required_support_n, not the printed percentage. Equivalent
-    # thresholds therefore produce identical target and background results.
+    # The seed depends on the analysis configuration so that target and background
+    # sampling are reproducible for each run.
     seed <- base_seed + analysis_number * 1000000L +
       config$required_support_n * 10000L + type_offset + replicate
     background_genes <- match_one_background(target_table, candidate_table, seed)
