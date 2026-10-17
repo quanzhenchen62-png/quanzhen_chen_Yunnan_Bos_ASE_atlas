@@ -69,6 +69,8 @@ Selective sweep analyses based on windowed population-genetic statistics.
   creates candidate selective-sweep regions
 `07_make_fst_deciles.py`
   assigns `FST` windows to deciles
+`*_jobs.tsv`, `pi_ratio_pairs.tsv`, `selective_signals_file_match.tsv`
+  job and parameter tables consumed by the scripts above (per-comparison windows, steps, sample lists, and result-file mappings)
 `run_workflow.sh`
   example workflow order
 
