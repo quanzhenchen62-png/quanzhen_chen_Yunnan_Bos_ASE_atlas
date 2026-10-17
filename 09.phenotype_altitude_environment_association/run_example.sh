@@ -2,12 +2,15 @@
 
 set -euo pipefail
 
-# Example 1: phenotype-environment association
+# Example 1: phenotype-environment association (LMM + cluster-level permutation)
 Rscript phenotype_environment_association.R \
-  --lmm-info data/LMM.info \
   --phe-info data/phe.info \
-  --outdir results/phenotype_altitude_environment_association \
-  --gcta-bin gcta64
+  --lmm-info data/LMM.info \
+  --outdir results/phenotype_environment_association \
+  --gcta-bin gcta64 \
+  --cor-threshold 0.8 \
+  --b 1000 \
+  --seed 1
 
 # Example 2: identify phenotype-associated ASE variants
 python3 phenotype_genotype_association.py \
@@ -30,6 +33,11 @@ python3 phenotype_genotype_association.py \
   --plink-bin plink
 
 # Example 3: environmental association of phenotype-associated ASE variants
+# Altitude and annual mean temperature are modeled separately because they
+# are strongly correlated; both focal models include the remaining four
+# environmental variables. Significance is assessed by BH-adjusted FDR and
+# by restricted permutation tests at the breed-locality and locality levels
+# (environmental packages permuted across units, latent factors held fixed).
 Rscript genotype_environment_association.R \
   --candidate-lfmm data/GENO_candidate.lfmm \
   --candidate-snp-info data/GENO_candidate.snp.info \
@@ -37,6 +45,7 @@ Rscript genotype_environment_association.R \
   --pruned-lfmm data/Bos_pruned.lfmm \
   --pruned-ind-order data/Bos_pruned.ind.order \
   --env-table data/Bos_ind_env.info \
+  --units-file data/panel_units.tsv \
   --outdir results/phenotype_associated_ASE_variant_environment_association \
   --individual-col individual \
   --altitude-col altitude \
@@ -45,4 +54,6 @@ Rscript genotype_environment_association.R \
   --uvb-col UVB_annual_mean \
   --longitude-col longitude \
   --latitude-col latitude \
-  --k 6
+  --k 6 \
+  --n-perm 1000 \
+  --seed 20260924

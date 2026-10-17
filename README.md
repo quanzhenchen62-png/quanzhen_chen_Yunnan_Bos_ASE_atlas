@@ -2,12 +2,16 @@
 
 Expression-based phylogeny analysis and matched-background testing.
 
+`00_identify_one_to_one_orthologs.sh`
+  identifies strict one-to-one orthologs among three species with OrthoFinder (longest protein per gene) and filters them against the expression matrices
 `01_define_targets_and_fixed_bins.R`
   defines target gene sets and fixed background bins
 `02_match_backgrounds_and_build_trees.R`
   matches background genes and builds expression trees
 `03_empirical_tests_and_violin_plots.R`
   performs empirical comparisons between observed and matched-background tree statistics and generates violin plots
+`04_group_exclusion_sensitivity.R`
+  prepares inputs for group-exclusion sensitivity analyses (e.g., excluding a group quantified on a non-species-matched reference); re-run scripts 01-03 on the transformed inputs
 
 ### `02.ase_detection_quantification`
 
@@ -23,6 +27,8 @@ Site-level ASE detection and quantification, followed by breed-level and populat
   generates `brd-ASE-1`, `brd-ASE-2`, and `brd-ASE-3`
 `05_call_pop_ase.py`
   generates tissue-level `pop-ASE`
+`06_call_brd_ase_proportion.py`
+  calls breed-level ASE using proportion-based thresholds (`brd-ASE-P1/P2/P3`), with the number of informative heterozygous samples per variant as the denominator
 `run_example.sh`
   minimal example workflow
 
@@ -99,8 +105,10 @@ Local-ancestry-resolved ASE workflow using RFMix and phASER outputs.
   tests ancestry-resolved interval ASE
 `05_check_site_ASE.py`
   annotates interval ASE with site-level ASE evidence
-`config.example.yaml`
-  example configuration
+`06_parse_msp_fb.py`
+  parses RFMix MSP/FB output into diploid tracts and haplotype segments with per-ancestry posterior summaries; flags high-confidence segments
+`07_export_high_confidence_segments.py`
+  concatenates per-chromosome segments, keeps high-confidence segments, and writes the ancestry code manifest
 `run_example.sh`
   minimal example workflow
 
@@ -142,3 +150,24 @@ Association analyses linking ASE variants to phenotypes and environmental variab
   genotype-environment association for phenotype-associated ASE variants
 `run_example.sh`
   minimal example workflow
+
+### `10.polyester_read_simulation`
+
+Simulation of RNA-seq reads with known allelic ratios from cattle, yak, and gayal Ref/Alt haplotype transcripts, for benchmarking residual reference bias and ASE detection power through the identical STAR + WASP + ASEReadCounter pipeline.
+
+`01_build_error_model.py`
+  builds an empirical per-cycle error model for Polyester from a representative BAM
+`02_select_targets_build_haplotypes.py`
+  selects target heterozygous-SNP loci and builds Ref/Alt haplotype transcript FASTA
+`03_build_readmat.py`
+  builds Polyester count matrices with fixed per-haplotype fragment counts
+`04_patch_polyester_150.R`
+  removes Polyester's 101-bp read-length guard to enable custom error models for 150-bp reads
+`05_simulate_reads.R`
+  simulates paired-end reads with `simulate_experiment_countmat`
+`06_verify_truth.py`
+  verifies fragment counts, SNP-covering reads, and pairing
+`07_fasta_to_fastq.py`
+  converts simulated FASTA to FASTQ with uniform Q40
+`run_example.sh`
+  example workflow order

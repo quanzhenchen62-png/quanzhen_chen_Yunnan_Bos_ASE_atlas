@@ -46,3 +46,14 @@ python3 "$ROOT/05_check_site_ASE.py" \
   --interval-ase "$RESULTS/interval_ASE.significant.tsv" \
   --phased-genotypes data/phased/sample.vcf.gz \
   --output "$RESULTS/site_ASE.interval_annotated.tsv"
+
+python3 "$ROOT/06_parse_msp_fb.py" \
+  --chromosome 1 \
+  --msp "$RESULTS/rfmix/chr1.rfmix.fullchr.msp.tsv" \
+  --fb "$RESULTS/rfmix/chr1.rfmix.fullchr.fb.tsv" \
+  --out-dir "$RESULTS/segments"
+
+python3 "$ROOT/07_export_high_confidence_segments.py" \
+  --segments-dir "$RESULTS/segments" \
+  --output "$RESULTS/high_confidence_local_ancestry_segments.tsv" \
+  --manifest-output "$RESULTS/ancestry_code_manifest.tsv"

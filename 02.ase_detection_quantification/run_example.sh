@@ -36,3 +36,7 @@ python3 04_call_brd_ase.py \
 python3 05_call_pop_ase.py \
   --metadata data/pop_ase_metadata.tsv \
   --output-prefix results/pop_ase/pop_ase
+
+python3 06_call_brd_ase_proportion.py \
+  --metadata data/brd_ase_proportion_metadata.tsv \
+  --output-prefix results/brd_ase_proportion/brd_ase_proportion

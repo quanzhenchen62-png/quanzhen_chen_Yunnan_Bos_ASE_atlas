@@ -3,31 +3,6 @@
 """
 Identify phenotype-associated ASE variants with GCTA MLMA.
 
-This script implements the analysis described in the manuscript section
-"Identification of phenotype-associated ASE variants".
-
-Implemented analyses
-1. LD muscle fiber diameter
-2. LD muscle fiber density
-3. Relative hump weight
-
-Method-constrained filtering
-1. LD traits:
-   concordant brd-ASE-3 variants located in altitude-associated
-   expression-cluster genes that are also candidate introgressed genes.
-2. Relative hump weight:
-   concordant HM brd-ASE-3 variants located in HM-specific genes.
-
-Assumptions
-1. Input ASE candidate tables are already prepared.
-2. Genotype BED/BIM/FAM, GRM, phenotype, covariate, and qcovariate files
-   are already prepared.
-3. LD phenotype/covariate files already correspond to Bos individuals.
-4. Relative hump weight phenotype/covariate files already correspond to
-   cattle with HM phenotypes.
-5. qcovar files already encode the manuscript-specified PCs:
-   LD traits = age + PC1-3
-   Relative hump weight = age + PC1
 """
 
 from __future__ import annotations
@@ -89,8 +64,8 @@ def parse_args() -> argparse.Namespace:
                         help="Column name containing ASE variant ID.")
     parser.add_argument("--ld-consistency-col", default="direction_consistency",
                         help="LD concordance column.")
-    parser.add_argument("--ld-altitude-gene-col", default="in_altitude_cluster_gene",
-                        help="LD altitude-associated expression-cluster gene flag.")
+    parser.add_argument("--ld-cluster-gene-col", default="in_cluster_gene",
+                        help="LD expression-cluster gene flag.")
     parser.add_argument("--ld-introgressed-gene-col", default="in_introgressed_gene",
                         help="LD candidate introgressed gene flag.")
     parser.add_argument("--hm-consistency-col", default="direction_consistency",
@@ -171,7 +146,7 @@ def filter_ld_variants(args: argparse.Namespace, rows: Sequence[Dict[str, str]])
     required = [
         args.variant_id_col,
         args.ld_consistency_col,
-        args.ld_altitude_gene_col,
+        args.ld_cluster_gene_col,
         args.ld_introgressed_gene_col,
     ]
     ensure_columns(rows, required, "LD ASE table")
@@ -179,7 +154,7 @@ def filter_ld_variants(args: argparse.Namespace, rows: Sequence[Dict[str, str]])
         row for row in rows
         if row[args.variant_id_col].strip()
         and is_consistent(row[args.ld_consistency_col])
-        and is_true(row[args.ld_altitude_gene_col])
+        and is_true(row[args.ld_cluster_gene_col])
         and is_true(row[args.ld_introgressed_gene_col])
     ]
 
@@ -226,6 +201,7 @@ def extract_genotypes(plink_bin: str, bfile_prefix: Path, extract_file: Path, ou
         plink_bin,
         "--bfile", str(bfile_prefix),
         "--extract", str(extract_file),
+        "--chr-set", "29",
         "--make-bed",
         "--out", str(out_prefix),
         "--threads", str(threads),
