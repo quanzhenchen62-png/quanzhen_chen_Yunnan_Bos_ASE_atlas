@@ -34,7 +34,6 @@ BCFTOOLS_BIN="bcftools"
 THREADS="4"
 GENERATIONS="8"
 RANDOM_SEED="12345"
-WEIGHT="3"
 
 REFERENCE_BCF=""
 QUERY_BCF=""
@@ -121,7 +120,6 @@ rm -f \
   -m "$SAMPLE_MAP" \
   -g "$GENETIC_MAP" \
   -o "$OUTPUT_PREFIX" \
-  -w "$WEIGHT" \
   -G "$GENERATIONS" \
   --chromosome="$CHROMOSOME" \
   --n-threads="$THREADS" \
